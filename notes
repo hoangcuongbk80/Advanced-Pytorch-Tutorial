@@ -1,0 +1,28 @@
+INSTALLATION: 
+(for linux 16.04 cuda9.0 python3.5.2)
+
+virtualenv -p python3 pytorch-1.0
+cd pytorch-1.0/
+source bin/activate
+
+pip3 install torchvision==0.2.1
+pip3 install https://download.pytorch.org/whl/cu90/torch-1.0.0-cp35-cp35m-linux_x86_64.whl
+
+
+TEST:
+
+python
+import torch
+torch.cuda.is_available()
+
+from __future__ import print_function
+import torch
+x = torch.rand(5, 3)
+print(x)
+
+
+REFERENCES:
+
+https://pytorch.org/get-started/locally/
+https://pytorch.org/get-started/previous-versions/
+
